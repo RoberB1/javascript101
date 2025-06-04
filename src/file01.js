@@ -23,4 +23,4 @@ pageId = "title";
 
 // Llama a la función setTitle para establecer el contenido del elemento HTML con el ID especificado
 
-pageTitle.setTitle(title);
+title.setTitle(pageTitle);

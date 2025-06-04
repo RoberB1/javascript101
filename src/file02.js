@@ -40,19 +40,23 @@ const frameworks = [
  *    para agregar una nueva fila con estos datos al cuerpo de la tabla HTML.
  */
 
+
 for (let element in frameworks){
-  const elements = element.split("|").trim();
+  const elements = element.split("|");
 
 
-  var frameworkObj = new Object();
-  frameworkObj.frameworkName = elements[0].trim();
-  frameworkObj.releaseDate = elements[1].trim();
-  frameworkObj.userName = elements[2].trim();
-  frameworkObj.popularityPercentage = elements[3].trim();
+  var frameworkObj = {
+  frameworkName : elements[0],
+  releaseDate : elements[1],
+  userName : elements[2],
+  popularityPercentage : elements[3],
 
-  addRow(frameworkObj, title);
+  }
+
+  addRow(frameworkObj,"data-frameworks");
 
 }
+
 
 
 

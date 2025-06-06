@@ -41,20 +41,20 @@ const frameworks = [
  */
 
 
-for (let element in frameworks){
-  const elements = element.split("|");
+for (let framework of frameworks) {
+  const parts = framework.split("|");
+
+  const [name, release, users, popularity] = parts.map(p => p.trim());
 
 
-  var frameworkObj = {
-  frameworkName : elements[0],
-  releaseDate : elements[1],
-  userName : elements[2],
-  popularityPercentage : elements[3],
+  const frameworkObj = {
+    frameworkName: name,
+    releaseDate: release,
+    usersName: users,
+    popularityPercentage: popularity
+  };
 
-  }
-
-  addRow(frameworkObj,"data-frameworks");
-
+  addRow(frameworkObj, "data-frameworks");
 }
 
 
